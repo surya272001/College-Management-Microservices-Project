@@ -19,7 +19,7 @@ public class CourseController {
     @Autowired
     private CourseService service;
 
-    @PostMapping("/addcompany")
+    @PostMapping("/addcourse")
     public Course saveCourse(@RequestBody Course course) {
         return service.saveCourse(course);
     }

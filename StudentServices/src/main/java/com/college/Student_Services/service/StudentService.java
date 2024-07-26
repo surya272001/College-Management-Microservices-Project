@@ -21,7 +21,7 @@ public class StudentService {
                 .lastname(StudentList.getLastname())
                 .email(StudentList.getEmail())
                 .cid(StudentList.getCid())
-
+                .gid(StudentList.getGid())
                 .build();
         return repo.save(student1);
     }
@@ -29,5 +29,9 @@ public class StudentService {
     public List<Student> getStudentsByCid(Long cid) {
         return repo.findByCid(cid);
     }
+    public List<Student> getStudentsByGid(Long gid) {
+        return repo.findByGid(gid);
+    }
+
 }
 

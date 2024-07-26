@@ -26,4 +26,9 @@ public class StudentController {
         return ResponseEntity.ok(studentService.getStudentsByCid(cid));
     }
 
+    @GetMapping("grade/{gid}")
+    public ResponseEntity<List<Student>> getStudentsByGid(@PathVariable Long gid) {
+        return ResponseEntity.ok(studentService.getStudentsByGid(gid));
+    }
+
 }

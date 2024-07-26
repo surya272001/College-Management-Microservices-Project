@@ -1,7 +1,6 @@
-package com.ust.GradeService.model;
+package com.ust.GradeService.client;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,18 +8,18 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
-@Entity
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
-@Table(name = "grade")
-public class Grade {
-    @Id
+
+public class Fullresponse {
     private Long gid;
     private Long id;
     private Long cid;
     private String grade;
     private Date examDate;
     private String remarks;
+    public List<Student> students;
 }
